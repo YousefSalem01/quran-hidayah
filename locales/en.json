@@ -285,7 +285,14 @@
     "about": "An online academy specialised in teaching Quran, Tajweed, Arabic language and Islamic studies for children and adults.",
     "usefulLinksTitle": "Useful links",
     "contactTitle": "Contact us",
-    "rights": "All rights reserved for Quran Academy"
+    "rights": "All rights reserved for Quran Academy",
+    "links": {
+      "about": "About the Academy",
+      "programs": "Programs",
+      "pricing": "Pricing",
+      "terms": "Terms and Conditions",
+      "privacy": "Privacy Policy"
+    }
   }
 }
 

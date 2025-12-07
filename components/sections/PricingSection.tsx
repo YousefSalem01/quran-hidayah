@@ -59,7 +59,7 @@ export function PricingSection({ onOpenFreeTrial }: PricingSectionProps) {
                       className="rounded-full px-3 py-1 text-xs font-semibold text-black"
                       style={{ backgroundColor: plan.badgeBgColor }}
                     >
-                      {plan.badge}
+                      {t(`pricing.plans.${key}.badge`)}
                     </span>
                   )}
                 </div>
