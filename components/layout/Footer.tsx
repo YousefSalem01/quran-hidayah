@@ -171,26 +171,34 @@ export function Footer({ whatsappHref }: FooterProps) {
           </div>
 
           {/* Contact Info */}
-          <div className="text-right">
-            <h3 className="mb-2 text-sm font-bold text-[#F4A825]">
+          <div className="space-y-2 text-right">
+            <h3 className="mb-3 text-sm font-bold text-[#F4A825]">
               {t("footer.contactTitle")}
             </h3>
-            <ul className="space-y-2 text-xs">
-              <li className="flex items-center justify-end gap-2">
-                <span className="text-[#E8BCA8]">{footerConfig.contactPhone}</span>
-                <span className="text-[#F4A825]">📞</span>
+            <ul className="space-y-2.5 text-xs">
+              <li>
+                <span className="inline-flex items-center gap-2 text-[#E8BCA8]">
+                  <span className="text-[#F4A825]">📞</span>
+                  {footerConfig.contactPhone}
+                </span>
               </li>
-              <li className="flex items-center justify-end gap-2">
-                <span className="text-[#E8BCA8]">{footerConfig.contactEmail}</span>
-                <span className="text-[#F4A825]">✉️</span>
+              <li>
+                <span className="inline-flex items-center gap-2 text-[#E8BCA8]">
+                  <span className="text-[#F4A825]">✉️</span>
+                  {footerConfig.contactEmail}
+                </span>
               </li>
-              <li className="flex items-center justify-end gap-2">
-                <span className="text-[#E8BCA8]">24/7</span>
-                <span className="text-[#F4A825]">⏰</span>
+              <li>
+                <span className="inline-flex items-center gap-2 text-[#E8BCA8]">
+                  <span className="text-[#F4A825]">⏰</span>
+                  24/7
+                </span>
               </li>
-              <li className="flex items-center justify-end gap-2">
-                <span className="text-[#E8BCA8]">{t("whyChooseUs.items.globalReach.title")}</span>
-                <span className="text-[#F4A825]">🌍</span>
+              <li>
+                <span className="inline-flex items-center gap-2 text-[#E8BCA8]">
+                  <span className="text-[#F4A825]">🌍</span>
+                  {t("whyChooseUs.items.globalReach.title")}
+                </span>
               </li>
             </ul>
           </div>
