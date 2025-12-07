@@ -1,0 +1,292 @@
+{
+  "navbar": {
+    "logoText": "Quran Academy",
+    "projectName": "Quran Academy",
+    "links": {
+      "home": "Home",
+      "programmes": "Programs",
+      "pricing": "Pricing",
+      "testimonials": "Testimonials",
+      "faq": "FAQ"
+    },
+    "cta": "Book now",
+    "languageToggle": "AR"
+  },
+  "hero": {
+    "welcomeText": "Welcome to",
+    "academyName": "Quran Academy",
+    "subHeading": "Learn Quran, Arabic and Islamic studies with certified teachers",
+    "description": "1-to-1 live classes • Structured curriculum • Native Arabic teachers • Flexible timings",
+    "primaryCta": "Book your free trial now",
+    "secondaryCta": "Chat on WhatsApp",
+    "heroAlt": "Student learning Quran online",
+    "highlights": {
+      "teachers": "Certified teachers",
+      "oneToOne": "1-to-1 classes",
+      "flexibleTime": "Flexible schedule"
+    }
+  },
+  "freeTrial": {
+    "title": "Book your free trial",
+    "subtitle": "30 minutes • No commitment • With a specialist teacher",
+    "description": "Tell us a little about the student and our team will contact you within 24 hours.",
+    "fields": {
+      "fullName": {
+        "label": "Full name",
+        "placeholder": "Ahmed Mohammed"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "example@email.com"
+      },
+      "whatsapp": {
+        "label": "WhatsApp number",
+        "placeholder": "+966 50 1234 5678"
+      },
+      "ageGroup": {
+        "label": "Student age group",
+        "placeholder": "Select age group",
+        "options": {
+          "4-7": "4 - 7 years",
+          "8-12": "8 - 12 years",
+          "13-17": "13 - 17 years",
+          "18+": "18 years and above"
+        }
+      },
+      "program": {
+        "label": "Program of interest",
+        "placeholder": "Select program",
+        "options": {
+          "quran_reading": "Quran Reading",
+          "tajweed": "Tajweed Rules",
+          "hifz": "Quran Memorisation (Hifz)",
+          "arabic": "Arabic language",
+          "islamic_studies": "Islamic studies"
+        }
+      }
+    },
+    "submitLabel": "Get the free trial",
+    "successMessage": "Jazakum Allahu khayran! We received your request. Our team will contact you shortly.",
+    "errors": {
+      "required": "This field is required",
+      "email": "Please enter a valid email address",
+      "whatsapp": "Please enter a valid WhatsApp number"
+    }
+  },
+  "whyChooseUs": {
+    "title": "Why choose our academy?",
+    "subtitle": "We combine Islamic authenticity with modern teaching methods",
+    "description": "More than 10 years of experience teaching Quran and Arabic online.",
+    "items": {
+      "teachers": {
+        "title": "Certified teachers",
+        "description": "Native Arabic teachers with high teaching experience and ijazah."
+      },
+      "flexibleTime": {
+        "title": "Flexible timings",
+        "description": "Class times that fit your schedule – join from anywhere in the world."
+      },
+      "safeEnvironment": {
+        "title": "Safe environment",
+        "description": "1-to-1 classes • supervised safe platform • guaranteed privacy."
+      },
+      "progressTracking": {
+        "title": "Progress tracking",
+        "description": "Monthly reports • regular assessments • detailed parent feedback."
+      },
+      "curricula": {
+        "title": "Specialised curricula",
+        "description": "Curricula designed for every level with focus on understanding and application."
+      },
+      "globalReach": {
+        "title": "Global reach",
+        "description": "Students from 50+ countries • teachers in different time zones."
+      }
+    }
+  },
+  "programmes": {
+    "title": "Our programs",
+    "subtitle": "Choose the program that matches your level and goals",
+    "description": "Structured learning paths for each age group and interest.",
+    "items": {
+      "program_1": {
+        "name": "Quran Reading",
+        "level": "Beginner",
+        "duration": "Ongoing • 2–4 classes per week",
+        "shortDescription": "From learning letters to fluent recitation.",
+        "highlights": [
+          "Learn Arabic letters and vowels",
+          "Structured Noorani-based curriculum",
+          "Focus on correct pronunciation"
+        ],
+        "ctaLabel": "Start your journey"
+      },
+      "program_2": {
+        "name": "Tajweed Rules",
+        "level": "Intermediate",
+        "duration": "Ongoing • 2–5 classes per week",
+        "shortDescription": "Master Tajweed and beautiful recitation.",
+        "highlights": [
+          "Full Tajweed rules",
+          "Practice with selected surahs",
+          "Regular recitation correction"
+        ],
+        "ctaLabel": "Improve your recitation"
+      },
+      "program_3": {
+        "name": "Quran Memorisation (Hifz)",
+        "level": "Advanced",
+        "duration": "Custom plan • 3–7 classes per week",
+        "shortDescription": "Memorise the Book of Allah in an organised way.",
+        "highlights": [
+          "Personalised memorisation plan",
+          "Daily revision strategy",
+          "Regular assessments and ijazah opportunities"
+        ],
+        "ctaLabel": "Start Hifz program"
+      },
+      "program_4": {
+        "name": "Arabic Language",
+        "level": "Mixed",
+        "duration": "Ongoing • 2–3 classes per week",
+        "shortDescription": "Modern Standard Arabic for understanding and speaking.",
+        "highlights": [
+          "Correct reading and writing",
+          "Speaking and listening practice",
+          "Vocabulary from the Quran"
+        ],
+        "ctaLabel": "Learn Arabic"
+      }
+    }
+  },
+  "pricing": {
+    "title": "Pricing plans",
+    "subtitle": "Choose the plan that suits you",
+    "description": "Transparent pricing • No hidden fees • Family discounts available",
+    "currency": "SAR",
+    "billingPeriod": "month",
+    "billingNote": "Prices are per student per month • Family discounts available • Cancel anytime",
+    "plans": {
+      "starter": {
+        "name": "Starter plan",
+        "description": "Ideal for beginners and younger kids",
+        "tagline": "2 classes per week (30 minutes)",
+        "features": [
+          "2 live 1-to-1 classes per week",
+          "Dedicated qualified teacher",
+          "Ready-made learning materials",
+          "Monthly progress report",
+          "WhatsApp support for parents"
+        ],
+        "cta": "Start with Starter plan"
+      },
+      "standard": {
+        "name": "Balanced plan",
+        "badge": "Most popular",
+        "description": "Perfect balance for steady and effective progress",
+        "tagline": "3 classes per week (45 minutes)",
+        "features": [
+          "3 live 1-to-1 classes per week (45 minutes)",
+          "Includes all Starter plan features",
+          "Assessment every two weeks",
+          "Personal follow-up plan",
+          "Extra learning resources library",
+          "Priority support",
+          "Recorded sessions available"
+        ],
+        "cta": "Book free trial"
+      },
+      "intensive": {
+        "name": "Intensive plan",
+        "description": "For serious students and Hifz programs",
+        "tagline": "5 classes per week (60 minutes)",
+        "features": [
+          "5 live 1-to-1 classes per week (60 minutes)",
+          "Includes all Balanced plan features",
+          "Intensive personalised Hifz plan",
+          "Daily revision with the teacher",
+          "Regular parent meetings",
+          "Detailed daily notes",
+          "Certificate upon completion"
+        ],
+        "cta": "Start intensive program"
+      }
+    }
+  },
+  "testimonials": {
+    "title": "What our students and parents say",
+    "subtitle": "Thousands of students benefited from our programs worldwide",
+    "stats": {
+      "activeStudents": "Active students",
+      "countries": "Countries",
+      "satisfaction": "Student satisfaction"
+    },
+    "items": {
+      "test_1": {
+        "name": "Fatimah Ahmed",
+        "role": "Parent",
+        "text": "MashaAllah, my daughter has memorised 3 juz in just 6 months. The teacher is very patient and professional."
+      },
+      "test_2": {
+        "name": "Mahmoud Ali",
+        "role": "Student",
+        "text": "For the first time, learning Quran feels easy and enjoyable. Ustadh explains very clearly and corrects every detail."
+      },
+      "test_3": {
+        "name": "Um Sarah",
+        "role": "Parent",
+        "text": "Alhamdulillah, my son who struggled with Al-Fatihah now recites with Tajweed. The follow-up is excellent and pricing is fair."
+      },
+      "test_4": {
+        "name": "Laila Mohammed",
+        "role": "Student",
+        "text": "I learned Arabic while working full-time! Lessons are flexible and my teacher focuses on what I need most."
+      }
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Answers to common questions",
+    "items": {
+      "faq_1": {
+        "question": "Can I start classes immediately?",
+        "answer": "Yes, you can book your free trial now and start within 48 hours. Our team will contact you to confirm the time and teacher."
+      },
+      "faq_2": {
+        "question": "What are the technical requirements?",
+        "answer": "You only need a computer, tablet or smartphone and a stable internet connection. We use Zoom or Google Meet."
+      },
+      "faq_3": {
+        "question": "Is there a long-term contract?",
+        "answer": "No, you can cancel anytime. There are no long-term contracts or cancellation fees."
+      },
+      "faq_4": {
+        "question": "What about beginners who do not speak Arabic?",
+        "answer": "Our teachers speak multiple languages and can explain clearly. Start with a free trial and we will assess the level."
+      },
+      "faq_5": {
+        "question": "Are the sessions recorded?",
+        "answer": "Yes, sessions are recorded in certain plans and you can review them whenever you need."
+      },
+      "faq_6": {
+        "question": "Do you offer family discounts?",
+        "answer": "Yes, when more than one student from the same family enrols, you can get up to 20% discount."
+      }
+    }
+  },
+  "finalCta": {
+    "title": "Ready to begin your journey with the Quran?",
+    "subtitle": "Book your free trial now and start learning with no commitment",
+    "description": "Excellent teachers • Flexible classes • Safe environment • Proven results",
+    "primaryCta": "Book now for free",
+    "secondaryCta": "Chat on WhatsApp"
+  },
+  "footer": {
+    "about": "An online academy specialised in teaching Quran, Tajweed, Arabic language and Islamic studies for children and adults.",
+    "usefulLinksTitle": "Useful links",
+    "contactTitle": "Contact us",
+    "rights": "All rights reserved for Quran Academy"
+  }
+}
+
+

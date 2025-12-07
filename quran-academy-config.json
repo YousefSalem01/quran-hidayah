@@ -1,0 +1,810 @@
+{
+  "project": {
+    "name": "أكاديمية القرآن الكريم",
+    "nameEn": "Quran Academy",
+    "type": "educational_islamic_platform",
+    "language": "ar",
+    "isRTL": true
+  },
+
+  "design_system": {
+    "colors": {
+      "primary": {
+        "main": "#0F5132",
+        "light": "#2D6A4F",
+        "lighter": "#40916C",
+        "dark": "#052E16",
+        "darkest": "#001D0F",
+        "contrast": "#FFFFFF"
+      },
+      "secondary": {
+        "main": "#D4A574",
+        "light": "#E8BCA8",
+        "lighter": "#F7E6C4",
+        "dark": "#8B6F47",
+        "contrast": "#FFFFFF"
+      },
+      "accent": {
+        "main": "#F4A825",
+        "light": "#F7B857",
+        "lighter": "#FCD34D",
+        "dark": "#D97706",
+        "contrast": "#FFFFFF"
+      },
+      "status": {
+        "success": "#10B981",
+        "warning": "#F59E0B",
+        "error": "#EF4444",
+        "info": "#3B82F6"
+      },
+      "neutral": {
+        "white": "#FFFFFF",
+        "light": "#F9FAFB",
+        "lighter": "#F3F4F6",
+        "gray": "#E5E7EB",
+        "dark": "#374151",
+        "darker": "#1F2937",
+        "black": "#111827"
+      }
+    },
+
+    "typography": {
+      "fontFamily": {
+        "ar": "Changa, 'Arabic Typesetting', Arial",
+        "en": "Inter, 'Segoe UI', system-ui",
+        "mono": "Fira Code, monospace"
+      },
+      "heading": {
+        "h1": {
+          "size": "48px",
+          "weight": 700,
+          "lineHeight": 1.2,
+          "color": "#0F5132"
+        },
+        "h2": {
+          "size": "36px",
+          "weight": 600,
+          "lineHeight": 1.3,
+          "color": "#052E16"
+        },
+        "h3": {
+          "size": "24px",
+          "weight": 600,
+          "lineHeight": 1.4,
+          "color": "#0F5132"
+        },
+        "h4": {
+          "size": "18px",
+          "weight": 600,
+          "lineHeight": 1.5,
+          "color": "#2D6A4F"
+        }
+      },
+      "body": {
+        "large": {
+          "size": "16px",
+          "weight": 400,
+          "lineHeight": 1.6
+        },
+        "regular": {
+          "size": "14px",
+          "weight": 400,
+          "lineHeight": 1.6
+        },
+        "small": {
+          "size": "12px",
+          "weight": 400,
+          "lineHeight": 1.5
+        }
+      }
+    },
+
+    "spacing": {
+      "xs": "4px",
+      "sm": "8px",
+      "md": "16px",
+      "lg": "24px",
+      "xl": "32px",
+      "2xl": "48px",
+      "3xl": "64px"
+    },
+
+    "borderRadius": {
+      "sm": "4px",
+      "md": "8px",
+      "lg": "12px",
+      "xl": "16px",
+      "full": "9999px"
+    },
+
+    "shadows": {
+      "sm": "0 1px 2px rgba(0, 0, 0, 0.05)",
+      "md": "0 4px 6px rgba(15, 81, 50, 0.1)",
+      "lg": "0 10px 15px rgba(15, 81, 50, 0.15)",
+      "xl": "0 20px 25px rgba(15, 81, 50, 0.2)"
+    }
+  },
+
+  "sections": [
+    {
+      "id": "hero",
+      "name": "البطل (صفحة ترحيب)",
+      "type": "hero",
+      "order": 1,
+      "enabled": true,
+      "props": {
+        "layout": "split_image_right",
+        "bgGradient": {
+          "from": "#0F5132",
+          "to": "#2D6A4F",
+          "angle": "135deg"
+        },
+        "welcomeText": "أهلاً وسهلاً في",
+        "academyName": "أكاديمية القرآن الكريم",
+        "subHeading": "تعلم القرآن والعربية والدراسات الإسلامية مع معلمين معتمدين",
+        "description": "حصص فردية مباشرة • منهج متخصص • معلمون عرب معتمدون • مرونة في الأوقات",
+        "primaryCta": {
+          "label": "احجز حصتك المجانية الآن",
+          "action": "open_free_trial_modal",
+          "variant": "primary",
+          "icon": "calendar"
+        },
+        "secondaryCta": {
+          "label": "تواصل عبر واتس",
+          "action": "open_whatsapp",
+          "variant": "secondary",
+          "icon": "whatsapp"
+        },
+        "highlights": [
+          {
+            "icon": "graduation",
+            "text": "معلمون معتمدون"
+          },
+          {
+            "icon": "group",
+            "text": "حصص فردية"
+          },
+          {
+            "icon": "schedule",
+            "text": "وقت مرن"
+          }
+        ],
+        "heroImage": {
+          "src": "/images/hero-student-quran.png",
+          "alt": "طالبة تتعلم القرآن"
+        }
+      }
+    },
+
+    {
+      "id": "free_trial",
+      "name": "نموذج الحصة المجانية",
+      "type": "lead_form_modal",
+      "order": 2,
+      "enabled": true,
+      "props": {
+        "title": "احجز حصتك المجانية",
+        "subtitle": "مدة 30 دقيقة • بدون التزام • مع معلم متخصص",
+        "description": "أخبرنا قليلاً عن نفسك وسيتواصل معك الفريق خلال 24 ساعة",
+        "bgColor": "#F7E6C4",
+        "accentColor": "#0F5132",
+        "fields": [
+          {
+            "name": "fullName",
+            "label": "الاسم كاملاً",
+            "placeholder": "أحمد محمد",
+            "type": "text",
+            "required": true,
+            "icon": "user"
+          },
+          {
+            "name": "email",
+            "label": "البريد الإلكتروني",
+            "placeholder": "example@email.com",
+            "type": "email",
+            "required": true,
+            "icon": "mail"
+          },
+          {
+            "name": "whatsapp",
+            "label": "رقم واتس أب",
+            "placeholder": "+966 50 1234 5678",
+            "type": "tel",
+            "required": true,
+            "icon": "whatsapp"
+          },
+          {
+            "name": "ageGroup",
+            "label": "فئة عمر الطالب",
+            "type": "select",
+            "required": true,
+            "options": [
+              { "value": "4-7", "label": "4 - 7 سنوات" },
+              { "value": "8-12", "label": "8 - 12 سنة" },
+              { "value": "13-17", "label": "13 - 17 سنة" },
+              { "value": "18+", "label": "18 سنة فأكثر" }
+            ],
+            "icon": "calendar"
+          },
+          {
+            "name": "program",
+            "label": "البرنامج المهتم به",
+            "type": "select",
+            "required": true,
+            "options": [
+              { "value": "quran_reading", "label": "تعلم قراءة القرآن" },
+              { "value": "tajweed", "label": "أحكام التجويد" },
+              { "value": "hifz", "label": "حفظ القرآن" },
+              { "value": "arabic", "label": "اللغة العربية" },
+              { "value": "islamic_studies", "label": "الدراسات الإسلامية" }
+            ],
+            "icon": "book"
+          }
+        ],
+        "submitLabel": "احصل على الحصة المجانية",
+        "successMessage": "جزاك الله خيراً! تم استلام طلبك. سيتواصل معك الفريق قريباً",
+        "successIcon": "check-circle",
+        "successColor": "#10B981"
+      }
+    },
+
+    {
+      "id": "whatsapp_widget",
+      "name": "أيقونة واتس أب",
+      "type": "floating_widget",
+      "order": 0,
+      "enabled": true,
+      "props": {
+        "type": "whatsapp_chat",
+        "phone": "966501234567",
+        "preFilledMessage": "السلام عليكم، أود التعرف على برامجكم التعليمية",
+        "position": "bottom-left",
+        "shape": "circle",
+        "size": "large",
+        "bgColor": "#25D366",
+        "icon": "whatsapp",
+        "label": "تحدث معنا",
+        "tooltip": "متاح 24/7",
+        "animation": "bounce",
+        "zIndex": 999
+      }
+    },
+
+    {
+      "id": "why_choose_us",
+      "name": "لماذا تختارنا",
+      "type": "feature_grid",
+      "order": 3,
+      "enabled": true,
+      "props": {
+        "layout": "grid_3",
+        "bgColor": "#F9FAFB",
+        "title": "لماذا تختار أكاديميتنا؟",
+        "subtitle": "نحن نجمع بين الأصالة الإسلامية والتعليم الحديث",
+        "description": "خبرة تعليمية تتجاوز 10 سنوات في تدريس القرآن والعربية",
+        "items": [
+          {
+            "icon": "star_check",
+            "iconBgColor": "#0F5132",
+            "title": "معلمون معتمدون",
+            "description": "معلمون عرب متخصصون مع شهادات معتمدة وخبرة تدريسية عالية",
+            "gradient": false
+          },
+          {
+            "icon": "schedule",
+            "iconBgColor": "#D4A574",
+            "title": "مرونة في الأوقات",
+            "description": "حصص مواعيد تناسب جدولك • حضور من أي مكان في العالم",
+            "gradient": false
+          },
+          {
+            "icon": "shield_check",
+            "iconBgColor": "#F4A825",
+            "title": "بيئة آمنة",
+            "description": "حصص فردية 1 على 1 • منصة آمنة مراقبة • خصوصية مضمونة",
+            "gradient": false
+          },
+          {
+            "icon": "chart_bar",
+            "iconBgColor": "#10B981",
+            "title": "تتبع التقدم",
+            "description": "تقارير شهرية • تقييمات منتظمة • ملاحظات مفصلة للأهالي",
+            "gradient": false
+          },
+          {
+            "icon": "book_open",
+            "iconBgColor": "#3B82F6",
+            "title": "مناهج متخصصة",
+            "description": "مناهج مصممة لكل مستوى • تركيز على الفهم والتطبيق العملي",
+            "gradient": false
+          },
+          {
+            "icon": "globe",
+            "iconBgColor": "#8B5CF6",
+            "title": "عالمية الوصول",
+            "description": "طلاب من 50+ دولة • معلمون متاحون بمختلف المناطق الزمنية",
+            "gradient": false
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "programmes",
+      "name": "البرامج التعليمية",
+      "type": "program_cards",
+      "order": 4,
+      "enabled": true,
+      "props": {
+        "layout": "carousel_4cols",
+        "bgColor": "#FFFFFF",
+        "title": "برامجنا التعليمية",
+        "subtitle": "اختر البرنامج الذي يناسب مستواك وأهدافك",
+        "description": "مسارات تعليمية منظمة لكل مرحلة عمرية واهتمام",
+        "items": [
+          {
+            "id": "program_1",
+            "name": "تعلم قراءة القرآن",
+            "level": "مبتدئ",
+            "icon": "book",
+            "iconBgColor": "#0F5132",
+            "accentColor": "#2D6A4F",
+            "duration": "مستمر • 2-4 حصص أسبوعياً",
+            "description": "تعلم قراءة القرآن من الألف بائها إلى الإتقان الكامل",
+            "shortDescription": "من تعلم الحروف إلى التلاوة السليمة",
+            "highlights": [
+              "تعلم الحروف والفتحات",
+              "منهج نوراني متدرج",
+              "تركيز على نطق الحروف الصحيح"
+            ],
+            "features": [
+              "حصص فردية مركزة",
+              "مواد تعليمية مرئية",
+              "ملاحظات يومية",
+              "واجبات منزلية موجهة"
+            ],
+            "ctaLabel": "ابدأ رحلتك",
+            "ctaAction": "open_free_trial_modal"
+          },
+          {
+            "id": "program_2",
+            "name": "أحكام التجويد",
+            "level": "متوسط",
+            "icon": "music",
+            "iconBgColor": "#D4A574",
+            "accentColor": "#8B6F47",
+            "duration": "مستمر • 2-5 حصص أسبوعياً",
+            "description": "إتقان أحكام التجويد والتلاوة البديعة للقرآن",
+            "shortDescription": "اتقن التجويد والتلاوة الحسنة",
+            "highlights": [
+              "أحكام التجويد الكاملة",
+              "التدرب على السور الكريمة",
+              "تصحيح التلاوة بشكل دوري"
+            ],
+            "features": [
+              "معلمون متخصصون في التجويد",
+              "تقييمات أسبوعية",
+              "تسجيلات لتقويم الأداء",
+              "شهادة عند الإتمام"
+            ],
+            "ctaLabel": "حسّن تلاوتك",
+            "ctaAction": "open_free_trial_modal"
+          },
+          {
+            "id": "program_3",
+            "name": "حفظ القرآن",
+            "level": "متقدم",
+            "icon": "heart",
+            "iconBgColor": "#F4A825",
+            "accentColor": "#D97706",
+            "duration": "مخطط مخصص • 3-7 حصص أسبوعياً",
+            "description": "برنامج منظم لحفظ كتاب الله مع تثبيت وتجويد",
+            "shortDescription": "احفظ كتاب الله بطريقة منظمة وسهلة",
+            "highlights": [
+              "خطة حفظ مخصصة حسب قدرتك",
+              "استراتيجية المراجعة اليومية",
+              "تقييمات منتظمة وإجازات",
+              "معلمون من حفاظ القرآن"
+            ],
+            "features": [
+              "جدول حفظ شخصي",
+              "متابعة يومية للحفظ",
+              "تعزيزات وحوافز",
+              "فرصة الإجازة بالقرآن"
+            ],
+            "ctaLabel": "ابدأ الحفظ",
+            "ctaAction": "open_free_trial_modal"
+          },
+          {
+            "id": "program_4",
+            "name": "اللغة العربية",
+            "level": "متنوع",
+            "icon": "language",
+            "iconBgColor": "#10B981",
+            "accentColor": "#059669",
+            "duration": "مستمر • 2-3 حصص أسبوعياً",
+            "description": "تعلم اللغة العربية الفصحى لفهم القرآن والحوار",
+            "shortDescription": "اللغة العربية السليمة وفصاحة التواصل",
+            "highlights": [
+              "القراءة والكتابة السليمة",
+              "مهارات التحدث والاستماع",
+              "تركيز على مفردات القرآن"
+            ],
+            "features": [
+              "منهج حديث وممتع",
+              "تطبيقات عملية يومية",
+              "تقييمات تفاعلية",
+              "مواد صوتية وبصرية"
+            ],
+            "ctaLabel": "تعلم العربية",
+            "ctaAction": "open_free_trial_modal"
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "pricing",
+      "name": "الأسعار والباقات",
+      "type": "pricing_table",
+      "order": 5,
+      "enabled": true,
+      "props": {
+        "layout": "cards_3",
+        "bgColor": "#F9FAFB",
+        "title": "باقات الأسعار",
+        "subtitle": "اختر الباقة المناسبة لك",
+        "description": "أسعار شفافة • بدون تكاليف إضافية • خصومات عائلية متاحة",
+        "currency": "ر.س",
+        "billingPeriod": "شهري",
+        "billingNote": "الأسعار للطالب الواحد شهرياً • تتوفر خصومات عائلية • إلغاء في أي وقت",
+        "plans": [
+          {
+            "id": "plan_starter",
+            "name": "الباقة الأساسية",
+            "nameEn": "Starter",
+            "price": 150,
+            "originalPrice": null,
+            "badge": null,
+            "highlight": false,
+            "bgColor": "#FFFFFF",
+            "accentColor": "#2D6A4F",
+            "classesPerWeek": 2,
+            "classDurationMinutes": 30,
+            "description": "مثالية للمبتدئين والأطفال الصغار",
+            "features": [
+              {
+                "text": "حصتان أسبوعياً",
+                "icon": "check",
+                "included": true
+              },
+              {
+                "text": "حصص فردية مباشرة",
+                "icon": "check",
+                "included": true
+              },
+              {
+                "text": "معلم متخصص مثبت",
+                "icon": "check",
+                "included": true
+              },
+              {
+                "text": "مواد تعليمية جاهزة",
+                "icon": "check",
+                "included": true
+              },
+              {
+                "text": "تقرير شهري للتقدم",
+                "icon": "check",
+                "included": true
+              },
+              {
+                "text": "دعم عبر واتس",
+                "icon": "check",
+                "included": true
+              },
+              {
+                "text": "تقييمات أسبوعية",
+                "icon": "close",
+                "included": false
+              }
+            ],
+            "ctaLabel": "ابدأ بالباقة الأساسية",
+            "ctaAction": "open_free_trial_modal"
+          },
+          {
+            "id": "plan_standard",
+            "name": "الباقة المتوازنة",
+            "nameEn": "Standard",
+            "price": 249,
+            "originalPrice": 299,
+            "badge": "الأكثر طلباً",
+            "badgeBgColor": "#F4A825",
+            "highlight": true,
+            "bgColor": "#0F5132",
+            "textColor": "#FFFFFF",
+            "accentColor": "#F4A825",
+            "classesPerWeek": 3,
+            "classDurationMinutes": 45,
+            "description": "الخيار الأمثل لتقدم مستقر وفعّال",
+            "features": [
+              {
+                "text": "ثلاث حصص أسبوعياً (45 دقيقة)",
+                "icon": "check",
+                "included": true
+              },
+              {
+                "text": "جميع مميزات الباقة الأساسية",
+                "icon": "check",
+                "included": true
+              },
+              {
+                "text": "تقييمات كل أسبوعين",
+                "icon": "check",
+                "included": true
+              },
+              {
+                "text": "خطة متابعة شخصية",
+                "icon": "check",
+                "included": true
+              },
+              {
+                "text": "مكتبة محتوى إضافي",
+                "icon": "check",
+                "included": true
+              },
+              {
+                "text": "أولوية في الدعم",
+                "icon": "check",
+                "included": true
+              },
+              {
+                "text": "حفظ الجلسات المسجلة",
+                "icon": "check",
+                "included": true
+              }
+            ],
+            "ctaLabel": "احجز الحصة المجانية",
+            "ctaAction": "open_free_trial_modal"
+          },
+          {
+            "id": "plan_intensive",
+            "name": "الباقة المكثفة",
+            "nameEn": "Intensive",
+            "price": 399,
+            "originalPrice": null,
+            "badge": null,
+            "highlight": false,
+            "bgColor": "#FFFFFF",
+            "accentColor": "#D4A574",
+            "classesPerWeek": 5,
+            "classDurationMinutes": 60,
+            "description": "للطلاب الجادين وحفاظ القرآن",
+            "features": [
+              {
+                "text": "خمس حصص أسبوعياً (ساعة كاملة)",
+                "icon": "check",
+                "included": true
+              },
+              {
+                "text": "جميع مميزات الباقة المتوازنة",
+                "icon": "check",
+                "included": true
+              },
+              {
+                "text": "خطة حفظ شخصية مكثفة",
+                "icon": "check",
+                "included": true
+              },
+              {
+                "text": "مراجعة يومية مع المعلم",
+                "icon": "check",
+                "included": true
+              },
+              {
+                "text": "اجتماعات دورية مع الوالدين",
+                "icon": "check",
+                "included": true
+              },
+              {
+                "text": "ملاحظات يومية مفصلة",
+                "icon": "check",
+                "included": true
+              },
+              {
+                "text": "شهادة معتمدة عند الإتمام",
+                "icon": "check",
+                "included": true
+              }
+            ],
+            "ctaLabel": "ابدأ البرنامج المكثف",
+            "ctaAction": "open_free_trial_modal"
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "testimonials",
+      "name": "آراء الطلاب والأهالي",
+      "type": "testimonials_carousel",
+      "order": 6,
+      "enabled": true,
+      "props": {
+        "layout": "carousel_3cols",
+        "bgColor": "#FFFFFF",
+        "title": "ماذا يقول طلابنا وأهاليهم؟",
+        "subtitle": "آلاف الطلاب استفادوا من برامجنا حول العالم",
+        "statsSection": {
+          "show": true,
+          "bgColor": "#0F5132",
+          "textColor": "#FFFFFF",
+          "stats": [
+            {
+              "number": 1200,
+              "label": "طالب نشط",
+              "icon": "users"
+            },
+            {
+              "number": 50,
+              "label": "دولة",
+              "icon": "globe"
+            },
+            {
+              "number": 95,
+              "label": "% رضا الطلاب",
+              "icon": "star"
+            }
+          ]
+        },
+        "testimonials": [
+          {
+            "id": "test_1",
+            "name": "فاطمة أحمد",
+            "role": "والدة",
+            "avatar": "/images/avatar-1.jpg",
+            "rating": 5,
+            "text": "ما شاء الله على التقدم الرهيب! ابنتي تحفظ الآن 3 أجزاء كاملة بعد 6 أشهر فقط. المعلم متقن وصبور جداً.",
+            "highlight": true,
+            "bgColor": "#F7E6C4"
+          },
+          {
+            "id": "test_2",
+            "name": "محمود علي",
+            "role": "طالب",
+            "avatar": "/images/avatar-2.jpg",
+            "rating": 5,
+            "text": "أول مرة أشعر إن تعلم القرآن سهل وممتع! الأستاذ يشرح بطريقة واضحة جداً ويهتم بكل تفاصيل التجويد.",
+            "highlight": false,
+            "bgColor": "#FFFFFF"
+          },
+          {
+            "id": "test_3",
+            "name": "أم سارة",
+            "role": "والدة",
+            "avatar": "/images/avatar-3.jpg",
+            "rating": 5,
+            "text": "الحمد لله، ابني اللي ما كان يقرأ الفاتحة صح، صار يتلو بتجويد! المتابعة رهيبة والسعر معقول جداً.",
+            "highlight": false,
+            "bgColor": "#FFFFFF"
+          },
+          {
+            "id": "test_4",
+            "name": "ليلى محمد",
+            "role": "طالبة",
+            "avatar": "/images/avatar-4.jpg",
+            "rating": 5,
+            "text": "تعلمت اللغة العربية وأنا بالشغل! الحصص مرنة والمعلمة تركز على ما أحتاجه بالفعل.",
+            "highlight": false,
+            "bgColor": "#FFFFFF"
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "faq",
+      "name": "الأسئلة الشائعة",
+      "type": "accordion_faq",
+      "order": 7,
+      "enabled": true,
+      "props": {
+        "layout": "single_column",
+        "bgColor": "#F9FAFB",
+        "title": "الأسئلة الشائعة",
+        "subtitle": "إجابات على الأسئلة التي تخطر بذهنك",
+        "items": [
+          {
+            "id": "faq_1",
+            "question": "هل يمكن بدء الدراسة فوراً؟",
+            "answer": "نعم، يمكنك حجز الحصة المجانية الآن والبدء خلال 48 ساعة. الفريق سيتواصل معك لتأكيد الموعد والمعلم."
+          },
+          {
+            "id": "faq_2",
+            "question": "ما هي متطلبات الدراسة؟",
+            "answer": "كل ما تحتاجه هو جهاز كمبيوتر أو تابلت أو هاتف ذكي + اتصال إنترنت جيد. نستخدم تطبيق Zoom أو Google Meet."
+          },
+          {
+            "id": "faq_3",
+            "question": "هل هناك التزام طويل المدى؟",
+            "answer": "لا، يمكنك إلغاء الاشتراك في أي وقت. ليس هناك عقود طويلة أو رسوم إلغاء."
+          },
+          {
+            "id": "faq_4",
+            "question": "ماذا عن الطلاب المبتدئين الذين لا يتكلمون العربية؟",
+            "answer": "معلمونا يتحدثون لغات متعددة ويمكنهم شرح المحتوى بوضوح. ابدأ بالحصة المجانية وسنقيم مستواك."
+          },
+          {
+            "id": "faq_5",
+            "question": "هل الحصص مسجلة ويمكن مراجعتها لاحقاً؟",
+            "answer": "نعم، جميع الحصص تُسجل (في باقات معينة) ويمكنك مراجعتها في أي وقت تحتاج."
+          },
+          {
+            "id": "faq_6",
+            "question": "هل هناك خصومات عائلية؟",
+            "answer": "بالتأكيد! إذا سجل أكثر من طالب من نفس العائلة، تحصل على خصم يصل إلى 20%."
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "cta_footer",
+      "name": "دعوة التحرك نهائية",
+      "type": "cta_section",
+      "order": 8,
+      "enabled": true,
+      "props": {
+        "bgGradient": {
+          "from": "#052E16",
+          "to": "#0F5132"
+        },
+        "title": "جاهز لبدء رحلتك مع القرآن؟",
+        "subtitle": "احجز حصتك المجانية الآن وابدأ التعلم بدون التزام",
+        "description": "معلمون متميزون • حصص مرنة • بيئة آمنة • نتائج مثبتة",
+        "primaryCta": {
+          "label": "احجز الآن مجاناً",
+          "action": "open_free_trial_modal",
+          "icon": "calendar"
+        },
+        "secondaryCta": {
+          "label": "تواصل عبر واتس",
+          "action": "open_whatsapp",
+          "icon": "whatsapp"
+        },
+        "textColor": "#FFFFFF"
+      }
+    }
+  ],
+
+  "config": {
+    "navbar": {
+      "bgColor": "#FFFFFF",
+      "textColor": "#0F5132",
+      "logo": "/logo.png",
+      "logoText": "أكاديمية القرآن",
+      "sticky": true,
+      "showLanguageToggle": true,
+      "cta": {
+        "label": "احجز الآن",
+        "action": "open_free_trial_modal"
+      }
+    },
+    "footer": {
+      "bgColor": "#052E16",
+      "textColor": "#FFFFFF",
+      "showSocial": true,
+      "contactEmail": "info@quranacademy.com",
+      "contactPhone": "+966501234567",
+      "links": [
+        { "label": "عن الأكاديمية", "href": "/about" },
+        { "label": "البرامج", "href": "#programmes" },
+        { "label": "الأسعار", "href": "#pricing" },
+        { "label": "الشروط والأحكام", "href": "/terms" },
+        { "label": "سياسة الخصوصية", "href": "/privacy" }
+      ]
+    }
+  }
+}
+
+
