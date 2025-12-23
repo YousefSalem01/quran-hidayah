@@ -3,29 +3,14 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useI18n } from "../i18n/I18nProvider";
-import { useHeroData } from "../../hooks/useHeroData";
+import quranConfig from "../../quran-academy-config.json";
 import type { HeroSectionProps } from "../../types";
-import defaultImage from "../../public/onboarding.jpg";
+import images from "../../public/onboarding.jpg";
 
 export function HeroSection({ onOpenFreeTrial, whatsappHref }: HeroSectionProps) {
-  const { locale } = useI18n();
-  const { data: heroData, isLoading } = useHeroData(locale);
-  
-  // Return null while loading or if no data
-  if (isLoading || !heroData) {
-    return null;
-  }
-  
-  const {
-    welcomeText,
-    academyName,
-    subHeading,
-    description,
-    primaryCta,
-    secondaryCta,
-    highlights,
-    heroImage,
-  } = heroData;
+  const { t } = useI18n();
+  const heroSection = quranConfig.sections.find((s) => s.id === "hero");
+  const highlights = heroSection && "props" in heroSection ? (heroSection.props as any).highlights || [] : [];
 
   return (
     <section
@@ -88,7 +73,7 @@ export function HeroSection({ onOpenFreeTrial, whatsappHref }: HeroSectionProps)
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            {welcomeText}
+            {t("hero.welcomeText")}
           </motion.p>
           
           <motion.h1
@@ -98,7 +83,7 @@ export function HeroSection({ onOpenFreeTrial, whatsappHref }: HeroSectionProps)
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            {academyName}
+            {t("hero.academyName")}
           </motion.h1>
           
           <motion.p
@@ -107,7 +92,7 @@ export function HeroSection({ onOpenFreeTrial, whatsappHref }: HeroSectionProps)
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            {subHeading}
+            {t("hero.subHeading")}
           </motion.p>
           
           <motion.p
@@ -116,7 +101,7 @@ export function HeroSection({ onOpenFreeTrial, whatsappHref }: HeroSectionProps)
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
           >
-            {description}
+            {t("hero.description")}
           </motion.p>
 
           <motion.div
@@ -125,15 +110,15 @@ export function HeroSection({ onOpenFreeTrial, whatsappHref }: HeroSectionProps)
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
-             <motion.button
+            <motion.button
               type="button"
               onClick={onOpenFreeTrial}
               className="flex items-center gap-2 rounded-full bg-[#F4A825] px-6 py-3 text-sm font-bold text-black shadow-lg transition hover:bg-[#F7B857] hover:shadow-xl"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span aria-hidden="true">{primaryCta.icon}</span>
-              <span>{primaryCta.label}</span>
+              <span aria-hidden="true">📅</span>
+              <span>{t("hero.primaryCta")}</span>
             </motion.button>
             
             <motion.a
@@ -144,21 +129,25 @@ export function HeroSection({ onOpenFreeTrial, whatsappHref }: HeroSectionProps)
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span aria-hidden="true">{secondaryCta.icon}</span>
-              <span>{secondaryCta.label}</span>
+              <span aria-hidden="true">💬</span>
+              <span>{t("hero.secondaryCta")}</span>
             </motion.a>
           </motion.div>
 
-          {highlights.length > 0 && (
-            <motion.div
-              className="mt-8 grid grid-cols-1 gap-4 text-sm md:grid-cols-3"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.7 }}
-            >
-              {highlights.map((highlight, index) => (
+          <motion.div
+            className="mt-8 grid grid-cols-1 gap-4 text-sm md:grid-cols-3"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.7 }}
+          >
+            {highlights.map((item: { icon: string }, index: number) => {
+              let labelKey: string = "";
+              if (item.icon === "graduation") labelKey = "teachers";
+              else if (item.icon === "group") labelKey = "oneToOne";
+              else if (item.icon === "schedule") labelKey = "flexibleTime";
+              return (
                 <motion.div
-                  key={index}
+                  key={item.icon}
                   className="rounded-2xl border border-white/20 bg-white/10 px-5 py-4 shadow-lg backdrop-blur-md transition hover:bg-white/20 hover:shadow-xl"
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -166,12 +155,12 @@ export function HeroSection({ onOpenFreeTrial, whatsappHref }: HeroSectionProps)
                   whileHover={{ y: -5 }}
                 >
                   <p className="font-semibold text-white">
-                    {highlight}
+                    {t(`hero.highlights.${labelKey}`)}
                   </p>
                 </motion.div>
-              ))}
-            </motion.div>
-          )}
+              );
+            })}
+          </motion.div>
         </motion.div>
 
         {/* Image Section */}
@@ -202,8 +191,8 @@ export function HeroSection({ onOpenFreeTrial, whatsappHref }: HeroSectionProps)
             <div className="relative aspect-square w-full max-w-md overflow-hidden rounded-3xl border-4 border-[#D4A574]/30 bg-linear-to-br from-white/5 to-white/10 p-2 shadow-2xl backdrop-blur-sm">
               <div className="relative h-full w-full overflow-hidden rounded-2xl">
                 <Image
-                  src={heroImage?.url || defaultImage}
-                  alt={heroImage?.alt || 'Hero Image'}
+                  src={images}
+                  alt={t("hero.heroAlt")}
                   fill
                   className="object-cover"
                   priority
